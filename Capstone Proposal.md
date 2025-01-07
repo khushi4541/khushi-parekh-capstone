@@ -12,33 +12,33 @@ Building and maintaining habits is challenging, especially without external acco
 
 ### User Profile
 
-Primary Users: Individuals looking to build and maintain habits, especially those who thrive on social accountability and gamification.
+**Primary Users:** Individuals looking to build and maintain habits, especially those who thrive on social accountability and gamification.
 
-Secondary Users: Friends or family members of primary users who join to provide support or participate in challenges.
+**Secondary Users:** Friends or family members of primary users who join to provide support or participate in challenges.
 
-Special Considerations:
+**Special Considerations:**
 -Ensure an intuitive user experience to cater to a broad audience.
 -Provide privacy options for users who may not want to share all habit data.
 -Create engaging visuals and gamification elements to maintain user interest.
 
 ### Features
 
-User Accounts:
+**User Accounts:**
 -Sign up and log in to track personal habits and connect with friends.
 
-Habit Tracking:
+**Habit Tracking:**
 -Create, edit, and delete habits.
 -Log daily/weekly completions and track streaks.
 
-Friends List:
+**Friends List:**
 -Add friends by username or email.
 -View friends' progress and streaks.
 
-Progress Sharing:
+**Progress Sharing:**
 -Display friends' streaks and points on the dashboard.
 -Show personal and group leaderboards for friendly competition.
 
-Motivational Features:
+**Motivational Features:**
 -Send and receive encouragement messages.
 -Challenge friends to complete specific habits or milestones.
 
@@ -46,17 +46,16 @@ Motivational Features:
 
 ### Tech Stack
 
-Front-end: React, Chart.js (for progress visualization).
+**Front-end:** React, Chart.js (for progress visualization).
 
-Back-end: Node.js with Express.
+**Back-end:** Node.js with Express.
 
-Database: MySQL
+**Database:** MySQL
 
-Authentication: Firebase Auth
+**Authentication:** Node.js with Express
 
 ### APIs
 
--Firebase Authentication for user login/sign-up.
 -No external APIs required; all data is managed via the backend.
 
 ### Sitemap
@@ -111,43 +110,43 @@ One user can send/receive many encouragement messages.
 
 ### Endpoints
 
-User Endpoints:
+**User Endpoints:**
 
-POST /signup – Create a new user account.
+POST /signup: Create a new user account.
 
-POST /login – Authenticate user credentials.
+POST /login: Authenticate user credentials.
 
-GET /user/:id – Fetch user profile and friends list.
+GET /user/:id: Fetch user profile and friends list.
 
 Habit Endpoints:
 
-POST /habits – Create a new habit.
+POST /habits: Create a new habit.
 
-GET /habits – Fetch all habits for the logged-in user.
+GET /habits: Fetch all habits for the logged-in user.
 
-PATCH /habits/:id – Update a habit.
+PATCH /habits/:id: Update a habit.
 
-DELETE /habits/:id – Delete a habit.
+DELETE /habits/:id: Delete a habit.
 
-Friendship Endpoints:
+**Friendship Endpoints:**
 
-POST /friends – Send a friend request.
+POST /friends: Send a friend request.
 
-GET /friends – Fetch all friends for the logged-in user.
+GET /friends: Fetch all friends for the logged-in user.
 
-PATCH /friends/:id – Accept or decline a friend request.
+PATCH /friends/:id: Accept or decline a friend request.
 
-Encouragement Endpoints:
+**Encouragement Endpoints:**
 
-POST /messages – Send an encouragement message.
+POST /messages: Send an encouragement message.
 
-GET /messages – Fetch received messages for the logged-in user.
+GET /messages: Fetch received messages for the logged-in user.
 
 ## Roadmap
 
 Week 1:
 
--Day 1-2: Finalize project structure, set up Firebase Authentication, and build backend endpoints.
+-Day 1-2: Finalize project structure, set up Authentication, and build backend endpoints.
 
 -Day 3-4: Implement habit tracking functionality (CRUD operations and streak tracking).
 
@@ -163,7 +162,7 @@ Week 2:
 
 -Day 13: Conduct testing, fix bugs, and refine UI/UX.
 
--Day 14: Prepare final presentation/demo and deploy the app.
+-Day 14: Prepare final presentation/demo
 
 ## Future Implementations
 Gamification:
