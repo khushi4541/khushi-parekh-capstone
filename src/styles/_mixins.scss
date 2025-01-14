@@ -14,11 +14,18 @@
 @mixin flex-space-between {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 @mixin reset-link-styling {
   color: inherit;
   text-decoration: none;
+}
+
+@mixin profile-image {
+  border-radius: 50%;
+  width: 2.75rem;
+  height: 2.75rem;
 }
 
 @mixin tablet {

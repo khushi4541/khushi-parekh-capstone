@@ -1,0 +1,12 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.header {
+    padding: 2rem;
+    @include flex-space-between;
+
+    &__profile {
+        @include profile-image;
+        background-color: $border-color;
+    }
+}

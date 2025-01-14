@@ -1,15 +1,17 @@
 import "./App.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "./components/Header/Header";
+import Homepage from "./pages/HomePage/HomePage";
 
 function App() {
-
-  return 
-  <BrowserRouter>
-  <Routes>
-    
-  </Routes>
-  
-  </BrowserRouter>;
+  return (
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Homepage/>}/>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
