@@ -7,11 +7,12 @@ import "./Nav.scss";
 
 function Nav() {
   const location = useLocation();
-  const isLandingPage = location.pathname === "/";
+  const hideNav = ["/", "/login", "/signup"];
+  const shouldHideNav = hideNav.includes(location.pathname);
 
   return (
     <>
-      {!isLandingPage && (
+      {!shouldHideNav && (
         <section className="nav">
           <div className="nav__container">
             <NavLink
