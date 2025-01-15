@@ -17,9 +17,9 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/signup" element={<SignupPage/>} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/:id" element={<Homepage />} />
-        <Route path="/habits" element={<AddHabitsPage />} />
-        <Route path="/friends/:id" element={<FriendsPage />} />
+        <Route path="/dashboard" element={<Homepage />} />
+        <Route path="/add-habit" element={<AddHabitsPage />} />
+        <Route path="/friends" element={<FriendsPage />} />
       </Routes>
       <Nav />
     </BrowserRouter>

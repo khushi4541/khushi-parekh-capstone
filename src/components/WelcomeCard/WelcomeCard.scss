@@ -1,0 +1,25 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.card {
+    background-color: $primary-button;
+    border-radius: 20px;
+    margin: 0 1.25rem;
+    display: flex;
+    align-items: center;
+    padding: 2.5rem 1rem;
+
+    &__text {
+        @include flex-column;
+        color: white;
+    }
+
+    &__greeting {
+        margin-bottom: 0;
+        font-weight: 400;
+
+        &--bold {
+            font-weight: 500;
+        }
+    }
+}
