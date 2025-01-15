@@ -1,5 +1,10 @@
+import WelcomeCard from "../../components/WelcomeCard/WelcomeCard";
+import './HomePage.scss'
+
 function Homepage () {
-    return(<></>)
+    return(<>
+    <WelcomeCard/>
+    </>)
 }
 
 export default Homepage;

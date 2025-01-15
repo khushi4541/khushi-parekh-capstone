@@ -1,5 +1,4 @@
 import Logo from '../../assets/logo/levelup-logo.svg';
-// import Logo from "../../assets/logo/levelup-logo";
 import "./Header.scss";
 
 function Header() {
