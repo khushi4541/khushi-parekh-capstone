@@ -9,13 +9,13 @@ function Nav() {
   return (
     <section className="nav">
       <div className="nav__container">
-        <NavLink to={"/:id"} className={({ isActive }) => `nav__icon ${isActive ? 'nav__icon--active' : ''}`}>
+        <NavLink to={"/dashboard"} className={({ isActive }) => `nav__icon ${isActive ? 'nav__icon--active' : ''}`}>
           <CalendarIcon className="nav__icon"/>
         </NavLink>
-        <NavLink to={"/habits"} className={({ isActive }) => `nav__icon ${isActive ? 'nav__icon--active' : ''}`}>
+        <NavLink to={"/add-habit"} className={({ isActive }) => `nav__icon ${isActive ? 'nav__icon--active' : ''}`}>
           <AddIcon className="nav__icon"/>
         </NavLink>
-        <NavLink to={"/friends/:id"} className={({ isActive }) => `nav__icon ${isActive ? 'nav__icon--active' : ''}`}>
+        <NavLink to={"/friends"} className={({ isActive }) => `nav__icon ${isActive ? 'nav__icon--active' : ''}`}>
           <FriendsIcon className="nav__icon"/>
         </NavLink>
         <SettingsIcon />
