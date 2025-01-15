@@ -3,12 +3,12 @@ import { useLocation } from 'react-router-dom';
 import "./Header.scss";
 
 function Header() {
-  const location = useLocation();
-  const isLandingPage = location.pathname === "/";
+  const hideHeader = ["/", "/login", "/signup"];
+  const shouldHideHeader = hideHeader.includes(location.pathname);
 
   return (
     <>
-    {!isLandingPage && ( <section className="header">
+    {!shouldHideHeader && ( <section className="header">
       <img src={Logo} alt='level up logo' />
       <div className="header__profile"></div>
     </section>)}

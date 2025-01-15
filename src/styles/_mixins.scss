@@ -28,6 +28,17 @@
   height: 2.75rem;
 }
 
+@mixin primary-button {
+  padding: 0.75rem 0;
+  font-family: "Montserrat";
+  font-weight: 600;
+  color: white;
+  background-color: $primary-button;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.25rem;
+}
+
 @mixin tablet {
   @media (min-width: $tablet-breakpoint) {
     @content;
