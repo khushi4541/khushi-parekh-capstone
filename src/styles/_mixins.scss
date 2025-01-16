@@ -40,6 +40,16 @@
   cursor: pointer;
 }
 
+@mixin input-box {
+  height: 2rem;
+  border-radius: 20px;
+  border: 1px solid $border-color;
+  padding-left: 1rem;
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 0.813rem;
+}
+
 @mixin tablet {
   @media (min-width: $tablet-breakpoint) {
     @content;

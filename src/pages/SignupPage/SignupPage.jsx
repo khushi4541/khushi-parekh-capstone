@@ -1,4 +1,5 @@
 import VectorArt from "../../assets/images/signup.svg";
+import SignupForm from "../../components/SignupForm/SignupForm";
 import './SignupPage.scss'
 
 function SignupPage() {
@@ -19,6 +20,7 @@ function SignupPage() {
           />
         </svg>
       </div>
+      <SignupForm />
     </section>
   );
 }

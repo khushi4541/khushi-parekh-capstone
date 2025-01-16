@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import "./Header.scss";
 
 function Header() {
+  const location = useLocation();
   const hideHeader = ["/", "/login", "/signup"];
   const shouldHideHeader = hideHeader.includes(location.pathname);
 
