@@ -1,0 +1,20 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/variables" as *;
+
+.signup {
+    &__header {
+        position: relative;
+        display: flex;
+    }
+
+    &__image {
+        margin: 0 auto;
+    }
+
+    &__arrow {
+        position: absolute;
+        top: 2rem;
+        left: 1.5rem;
+        fill: $border-color;
+    }
+}

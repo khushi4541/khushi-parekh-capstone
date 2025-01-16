@@ -6,7 +6,7 @@ import Nav from "./components/Nav/Nav";
 import AddHabitsPage from "./pages/AddHabitsPage/AddHabitsPage";
 import LandingPage from "./pages/LandingPage/LandingPage";
 import FriendsPage from "./pages/FriendsPage/FriendsPage";
-import LoginPage from "./pages/LoginPage/LoginPage"
+import LoginPage from "./pages/LoginPage/LoginPage";
 import SignupPage from "./pages/SignupPage/SignupPage";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/signup" element={<SignupPage/>} />
+        <Route path="/signup" element={<SignupPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/dashboard" element={<Homepage />} />
         <Route path="/add-habit" element={<AddHabitsPage />} />
