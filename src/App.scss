@@ -1,6 +1,10 @@
 @use "./styles/variables" as *;
 @use "./styles/typography" as *;
 
+html {
+  color: $primary-text;
+}
+
 body {
   box-sizing: border-box;
   margin: 0;

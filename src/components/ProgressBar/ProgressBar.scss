@@ -1,0 +1,38 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.progress {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+
+  &__group {
+    width: 85%;
+    height: 5rem;
+  }
+
+  &__bar {
+    width: 100%;
+    height: 0.6rem;
+    background-color: $primary-button;
+    overflow: hidden;
+    position: relative;
+    border-radius: 5px;
+  }
+
+  &__text {
+    margin-bottom: 0.5rem;
+    color: $primary-text;
+  }
+
+  &__fill {
+    height: 100%;
+    background-color: $interactive-elements;
+    border-radius: 5px;
+  }
+
+  &__add {
+    fill: $interactive-elements;
+  }
+}

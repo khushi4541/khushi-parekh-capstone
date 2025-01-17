@@ -17,10 +17,14 @@
     align-items: center;
   }
 
-  &__icon {
+  &__link {
     fill: $primary-button;
     &--active {
       fill: $interactive-elements;
     }
+  }
+
+  &__icon {
+    fill: inherit;
   }
 }

@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { baseURL } from "../../../utils/api";
 import "./HomePage.scss";
 import HabitsList from "../../components/HabitsList/HabitsList";
+import ProgressBar from "../../components/ProgressBar/ProgressBar";
 
 function Homepage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -62,6 +63,7 @@ function Homepage() {
       {!isLoading && !error && (
         <>
           <WelcomeCard userData={userData} habitData={habitData} />
+          <ProgressBar habitData={habitData}/>
           <HabitsList habitData={habitData}/>
         </>
       )}

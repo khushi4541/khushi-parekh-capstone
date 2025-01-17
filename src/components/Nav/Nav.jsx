@@ -18,7 +18,7 @@ function Nav() {
             <NavLink
               to={"/dashboard"}
               className={({ isActive }) =>
-                `nav__icon ${isActive ? "nav__icon--active" : ""}`
+                `nav__link ${isActive ? "nav__link--active" : ""}`
               }
             >
               <CalendarIcon className="nav__icon" />
@@ -26,7 +26,7 @@ function Nav() {
             <NavLink
               to={"/add-habit"}
               className={({ isActive }) =>
-                `nav__icon ${isActive ? "nav__icon--active" : ""}`
+                `nav__link ${isActive ? "nav__link--active" : ""}`
               }
             >
               <AddIcon className="nav__icon" />
@@ -34,7 +34,7 @@ function Nav() {
             <NavLink
               to={"/friends"}
               className={({ isActive }) =>
-                `nav__icon ${isActive ? "nav__icon--active" : ""}`
+                `nav__link ${isActive ? "nav__link--active" : ""}`
               }
             >
               <FriendsIcon className="nav__icon" />
