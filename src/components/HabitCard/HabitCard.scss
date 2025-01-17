@@ -1,2 +1,8 @@
 @use '../../styles/variables' as *;
 @use '../../styles/mixins' as *;
+
+.habit-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

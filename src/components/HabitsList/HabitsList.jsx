@@ -1,10 +1,13 @@
 import HabitCard from "../HabitCard/HabitCard";
-import './HabitsList.scss'
+import "./HabitsList.scss";
 
-function HabitsList(habitData) {
+function HabitsList({habitData}) {
+    console.log(habitData)
   return (
     <section className="list">
-      <HabitCard />
+      {habitData.map((data) => (
+        <HabitCard data={data} key={data.id} />
+      ))};
     </section>
   );
 }
