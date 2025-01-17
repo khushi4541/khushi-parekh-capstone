@@ -3,15 +3,17 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { baseURL } from "../../../utils/api";
 import "./HomePage.scss";
+import HabitsList from "../../components/HabitsList/HabitsList";
 
 function Homepage() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState("");
   const [userData, setUserData] = useState({});
+  const [habitData, setHabitData] = useState({});
+
+  const authToken = localStorage.getItem("authToken");
 
   const getUserData = async () => {
-    const authToken = localStorage.getItem("authToken");
-
     try {
       const { data } = await axios.get(`${baseURL}/users/profile`, {
         headers: {
@@ -20,25 +22,50 @@ function Homepage() {
       });
 
       setUserData(data);
-      setIsLoading(false);
     } catch (error) {
-      // If the backend responded with a 401 status, that means their JWT isn't valid
       if (error.status === 401) {
         setError("You must be logged in to view this page");
-        setIsLoading(false);
+      }
+    }
+  };
+
+  const getHabitData = async () => {
+    try {
+      const { data } = await axios.get(`${baseURL}/habits/`, {
+        headers: {
+          authorization: `Bearer ${authToken}`,
+        },
+      });
+
+      setHabitData(data);
+    } catch (error) {
+      if (error.status === 401) {
+        setError("You must be logged in to view this page");
       }
     }
   };
 
   useEffect(() => {
-    getUserData();
+    const fetchData = async () => {
+      await Promise.all([getUserData(), getHabitData()]);
+      setIsLoading(false); 
+    };
+
+    fetchData();
   }, []);
 
+
   return (
-    <>
-      {isLoading && <h1 className="home__loading">Loading...</h1>}
-      {!isLoading && !error && <WelcomeCard data={userData} />}
-    </>
+    <section className="dashboard">
+      {isLoading && <h1 className="dashboard__loading">Loading...</h1>}
+      {!isLoading && error && <h1 className="dashboard__error">{error}</h1>}
+      {!isLoading && !error && (
+        <>
+          <WelcomeCard userData={userData} habitData={habitData} />
+          <HabitsList habitData={habitData}/>
+        </>
+      )}
+    </section>
   );
 }
 

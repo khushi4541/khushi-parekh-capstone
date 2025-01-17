@@ -1,4 +1,7 @@
-.home__loading {
+.dashboard {
+  &__loading, &__error {
     text-align: center;
     margin-top: 5rem;
+  }
+  
 }
