@@ -64,7 +64,7 @@ function Homepage() {
         <>
           <WelcomeCard userData={userData} habitData={habitData} />
           <ProgressBar habitData={habitData}/>
-          <HabitsList habitData={habitData}/>
+          <HabitsList habitData={habitData} getHabitData={getHabitData}/>
         </>
       )}
     </section>
