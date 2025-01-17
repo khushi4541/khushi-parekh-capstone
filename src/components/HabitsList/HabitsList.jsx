@@ -7,7 +7,7 @@ function HabitsList({habitData}) {
     <section className="list">
       {habitData.map((data) => (
         <HabitCard data={data} key={data.id} />
-      ))};
+      ))}
     </section>
   );
 }
