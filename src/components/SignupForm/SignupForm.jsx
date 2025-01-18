@@ -46,16 +46,19 @@ function SignupForm() {
 
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
-      return;
+      return false;
     }
+
+    return true;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const url = `${baseURL}/users/register`;
 
-    if (validateForm()) {
-      console.log("Form submitted", formData);
+    if (!validateForm()) {
+      console.log("validation failed:", errors);
+      return
     }
     try {
       await axios.post(url, {

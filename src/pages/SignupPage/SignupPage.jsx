@@ -1,13 +1,20 @@
 import VectorArt from "../../assets/images/signup.svg";
 import SignupForm from "../../components/SignupForm/SignupForm";
-import './SignupPage.scss'
+import { useNavigate } from "react-router-dom";
+import "./SignupPage.scss";
 
 function SignupPage() {
+  const navigate = useNavigate();
+  const handleBack = () => {
+    navigate(-1);
+  };
   return (
     <section className="signup">
       <div className="signup__header">
         <img src={VectorArt} alt="" className="signup__image" />
-        <svg className="signup__arrow"
+        <svg
+          onClick={handleBack}
+          className="signup__arrow"
           width="40"
           height="40"
           viewBox="0 0 40 40"

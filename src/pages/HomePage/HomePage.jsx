@@ -49,12 +49,11 @@ function Homepage() {
   useEffect(() => {
     const fetchData = async () => {
       await Promise.all([getUserData(), getHabitData()]);
-      setIsLoading(false); 
+      setIsLoading(false);
     };
 
     fetchData();
   }, []);
-
 
   return (
     <section className="dashboard">
@@ -63,8 +62,8 @@ function Homepage() {
       {!isLoading && !error && (
         <>
           <WelcomeCard userData={userData} habitData={habitData} />
-          <ProgressBar habitData={habitData}/>
-          <HabitsList habitData={habitData} getHabitData={getHabitData}/>
+          <ProgressBar habitData={habitData} />
+          <HabitsList habitData={habitData} getHabitData={getHabitData} />
         </>
       )}
     </section>

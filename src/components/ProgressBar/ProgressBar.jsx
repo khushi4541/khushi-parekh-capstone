@@ -1,5 +1,6 @@
 import "./ProgressBar.scss";
 import AddIcon from "../../assets/icons/AddIcon";
+import { NavLink } from "react-router-dom";
 
 function ProgressBar({ habitData }) {
   const totalHabits = habitData.length;
@@ -25,7 +26,9 @@ function ProgressBar({ habitData }) {
           ></div>
         </div>
       </div>
+      <NavLink to={'/add-habit'}>
       <AddIcon className="progress__add"/>
+      </NavLink>
     </section>
   );
 }

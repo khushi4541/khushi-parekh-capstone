@@ -1,7 +1,7 @@
 import CalendarIcon from "../../assets/icons/CalendarIcon";
 import AddIcon from "../../assets/icons/AddIcon";
 import FriendsIcon from "../../assets/icons/FriendsIcon";
-import SettingsIcon from "../../assets/icons/SettingsIcon";
+import LogOutIcon from "../../assets/icons/LogOutIcon";
 import { NavLink, useLocation } from "react-router-dom";
 import "./Nav.scss";
 
@@ -39,7 +39,7 @@ function Nav() {
             >
               <FriendsIcon className="nav__icon" />
             </NavLink>
-            <SettingsIcon />
+            <LogOutIcon />
           </div>
         </section>
       )}

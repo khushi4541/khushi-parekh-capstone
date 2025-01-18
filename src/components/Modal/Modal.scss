@@ -1,0 +1,63 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+  &__foreground {
+    background-color: white;
+    margin: 2rem auto;
+    padding: 1.25rem;
+    height: 35vh;
+    width: 80%;
+    @include flex-column;
+    justify-content: space-between;
+    border-radius: 15px;
+  }
+
+  &__body {
+    @include flex-column;
+    height: 100%;
+  }
+
+  &__close {
+    align-self: flex-end;
+    cursor: pointer;
+  }
+
+  &__title {
+    margin: 0.5rem 0;
+    padding-left: 0.5rem;  
+  }
+
+  &__message {
+    font-size: 1.25rem;
+    padding-left: 0.5rem;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  &__cancel {
+    width: 50%;
+    @include secondary-button;
+  }
+
+  &__action {
+    @include primary-button;
+    width: 50%;
+  }
+}

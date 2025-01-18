@@ -5,8 +5,4 @@
     padding: 2rem 1.25rem;
     @include flex-space-between;
 
-    &__profile {
-        @include profile-image;
-        background-color: $border-color;
-    }
 }

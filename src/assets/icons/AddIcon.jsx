@@ -2,8 +2,8 @@ function AddIcon({className}) {
   return (
     <svg
       className={className}
-      width="39"
-      height="39"
+      width="42"
+      height="42"
       viewBox="0 0 39 39"
       xmlns="http://www.w3.org/2000/svg"
       fill="currentColor"

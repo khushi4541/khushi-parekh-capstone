@@ -1,13 +1,19 @@
 import VectorArt from "../../assets/images/login.svg";
 import LoginForm from "../../components/LoginForm/LoginForm";
-import './LoginPage.scss'
+import { useNavigate } from "react-router-dom";
+import "./LoginPage.scss";
 
 function LoginPage() {
+  const navigate = useNavigate()
+  const handleBack = () => {
+    navigate(-1); 
+  };
   return (
     <section className="login">
       <div className="login__header">
         <img src={VectorArt} alt="" className="login__image" />
         <svg
+          onClick={handleBack}
           className="login__arrow"
           width="40"
           height="40"
