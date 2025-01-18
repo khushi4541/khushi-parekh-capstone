@@ -1,11 +1,12 @@
 import "./Modal.scss";
 
-function Modal({ handleLogout }) {
+function Modal({ handleLogout, closeModal }) {
   return (
     <div className="modal">
       <article className="modal__foreground">
         <div className="modal__body">
           <svg
+            onClick={closeModal}
             className="modal__close"
             width="38"
             height="38"
@@ -24,7 +25,7 @@ function Modal({ handleLogout }) {
           </p>
         </div>
         <div className="modal__buttons">
-          <button className="modal__cancel">Cancel</button>
+          <button className="modal__cancel" onClick={closeModal}>Cancel</button>
           <button className="modal__action" onClick={handleLogout}>Log out</button>
         </div>
       </article>

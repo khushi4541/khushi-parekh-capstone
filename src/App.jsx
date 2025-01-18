@@ -20,10 +20,6 @@ function App() {
     window.location.href = "/";
   };
 
-  const toggleModal = () => {
-    setShowModal(!showModal)
-  }
-
   return (
     <BrowserRouter>
       <Header />
@@ -35,8 +31,8 @@ function App() {
         <Route path="/add-habit" element={<AddHabitsPage />} />
         <Route path="/friends" element={<FriendsPage />} />
       </Routes>
-      <Modal handleLogout={handleLogout}/>
-      <Nav toggleModal={toggleModal}/>
+      {showModal && (<Modal handleLogout={handleLogout} closeModal={() => setShowModal(false)}/>)}
+      <Nav openModal={() => setShowModal(true)}/>
     </BrowserRouter>
   );
 }

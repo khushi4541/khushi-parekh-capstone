@@ -5,7 +5,7 @@ import LogOutIcon from "../../assets/icons/LogOutIcon";
 import { NavLink, useLocation } from "react-router-dom";
 import "./Nav.scss";
 
-function Nav() {
+function Nav({ openModal }) {
   const location = useLocation();
   const hideNav = ["/", "/login", "/signup"];
   const shouldHideNav = hideNav.includes(location.pathname);
@@ -39,7 +39,9 @@ function Nav() {
             >
               <FriendsIcon className="nav__icon" />
             </NavLink>
-            <LogOutIcon />
+            <div className="nav__logout" onClick={openModal}>
+              <LogOutIcon />
+            </div>
           </div>
         </section>
       )}
