@@ -7,12 +7,12 @@
 
     &__input {
         @include input-box;
-        width: 95%;        
+        width: 94%;        
     }
 
     &__icon {
         position: absolute;
-        right: 30px;
+        right: 35px;
         bottom: 2px;
     }
 }
