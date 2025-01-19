@@ -7,17 +7,19 @@ import streak from "../../assets/icons/streak-icon.svg";
 import axios from "axios";
 import "./HabitCard.scss";
 
-function HabitCard({ data, getHabitData }) {
+function HabitCard({ data, getHabitData, openModal }) {
   const [streakData, setStreakData] = useState(data);
   const [isCompleted, setIsCompleted] = useState(data.completed);
   const [hasStreak, setHasStreak] = useState(data.streak_count);
   const authToken = localStorage.getItem("authToken");
 
+  const habitId = data.id;
+
   const updateHabitCompletion = async () => {
     setIsCompleted(!isCompleted);
     try {
       const response = await axios.post(
-        `${baseURL}/habits/${data.id}/completion`,
+        `${baseURL}/habits/${habitId}/completion`,
         { completed: !isCompleted },
         {
           headers: {
@@ -30,6 +32,32 @@ function HabitCard({ data, getHabitData }) {
       getHabitData();
     } catch (error) {
       console.error("Error updating habit completion:", error);
+    }
+  };
+
+  const handleDeleteHabit = () => {
+    openModal({
+      title: "Delete Habit?",
+      message:
+        "Are you sure you want to delete this habit? This action cannot be undone.",
+      primaryActionText: "Delete",
+      secondaryActionText: "Cancel",
+      primaryAction: () => deleteHabit(),
+      secondaryAction: () => openModal(null),
+    });
+  };
+
+  const deleteHabit = async () => {
+    try {
+      await axios.delete(`${baseURL}/habits/${habitId}`, {
+        headers: {
+          Authorization: `Bearer ${authToken}`,
+        },
+      });
+      openModal(null); 
+      getHabitData();
+    } catch (error) {
+      console.error("Failed to delete habit:", error);
     }
   };
 
@@ -73,6 +101,7 @@ function HabitCard({ data, getHabitData }) {
         src={deleteIcon}
         alt="purple vector art trashcan"
         className="habit-card__delete"
+        onClick={handleDeleteHabit}
       />
     </article>
   );

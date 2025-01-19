@@ -6,7 +6,7 @@ import "./HomePage.scss";
 import HabitsList from "../../components/HabitsList/HabitsList";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
 
-function Homepage() {
+function Homepage({ openModal }) {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState("");
   const [userData, setUserData] = useState({});
@@ -63,7 +63,7 @@ function Homepage() {
         <>
           <WelcomeCard userData={userData} habitData={habitData} />
           <ProgressBar habitData={habitData} />
-          <HabitsList habitData={habitData} getHabitData={getHabitData} />
+          <HabitsList habitData={habitData} getHabitData={getHabitData} openModal={openModal}/>
         </>
       )}
     </section>

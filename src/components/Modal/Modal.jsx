@@ -1,12 +1,12 @@
 import "./Modal.scss";
 
-function Modal({ handleLogout, closeModal }) {
+function Modal({ title, message, primaryActionText, secondaryActionText, primaryAction, secondaryAction }) {
   return (
     <div className="modal">
       <article className="modal__foreground">
         <div className="modal__body">
           <svg
-            onClick={closeModal}
+            onClick={secondaryAction}
             className="modal__close"
             width="38"
             height="38"
@@ -19,14 +19,14 @@ function Modal({ handleLogout, closeModal }) {
               fill="#553C8B"
             />
           </svg>
-          <h3 className="modal__title">Log out?</h3>
+          <h3 className="modal__title">{title}</h3>
           <p className="modal__message">
-            Are you sure you would like to log out of your account?
+            {message}
           </p>
         </div>
         <div className="modal__buttons">
-          <button className="modal__cancel" onClick={closeModal}>Cancel</button>
-          <button className="modal__action" onClick={handleLogout}>Log out</button>
+          <button className="modal__cancel" onClick={secondaryAction}>{secondaryActionText}</button>
+          <button className="modal__action" onClick={primaryAction}>{primaryActionText}</button>
         </div>
       </article>
     </div>

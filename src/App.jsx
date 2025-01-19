@@ -13,11 +13,22 @@ import Modal from "./components/Modal/Modal";
 
 
 function App() {
-  const [showModal, setShowModal] = useState(false);
+  const [modalConfig, setModalConfig] = useState(null);
 
   const handleLogout = () => {
     localStorage.removeItem("authToken");
     window.location.href = "/";
+  };
+
+  const openLogoutModal = () => {
+    setModalConfig({
+      title: "Log out?",
+      message: "Are you sure you would like to log out of your account?",
+      primaryActionText: "Log out",
+      secondaryActionText: "Cancel",
+      primaryAction: handleLogout,
+      secondaryAction: () => setModalConfig(null),
+    });
   };
 
   return (
@@ -27,12 +38,12 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/dashboard" element={<Homepage />} />
+        <Route path="/dashboard" element={<Homepage openModal={setModalConfig} />} />
         <Route path="/add-habit" element={<AddHabitsPage />} />
         <Route path="/friends" element={<FriendsPage />} />
       </Routes>
-      {showModal && (<Modal handleLogout={handleLogout} closeModal={() => setShowModal(false)}/>)}
-      <Nav openModal={() => setShowModal(true)}/>
+      {modalConfig && (<Modal {...modalConfig}/>)}
+      <Nav openModal={openLogoutModal}/>
     </BrowserRouter>
   );
 }
