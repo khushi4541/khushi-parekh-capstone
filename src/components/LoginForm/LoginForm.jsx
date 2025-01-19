@@ -84,9 +84,7 @@ function LoginForm() {
             <p className="login-form__label">{label}</p>
             <input
               type={name === "password" ? "password" : "text"}
-              className={`login-form__input ${
-                errors[name] ? "login-form__input--error" : ""
-              }`}
+              className="login-form__input" 
               name={name}
               onChange={(e) => handleChange(e)}
             />

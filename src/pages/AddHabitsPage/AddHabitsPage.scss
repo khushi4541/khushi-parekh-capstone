@@ -1,0 +1,9 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/variables" as *;
+
+.add-habits {
+  &__header {
+    @include flex-column;
+    align-items: center;
+  }
+}

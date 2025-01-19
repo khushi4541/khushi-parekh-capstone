@@ -97,9 +97,7 @@ function SignupForm() {
                   ? "password"
                   : "text"
               }
-              className={`form__input ${
-                errors[name] ? "form__input--error" : ""
-              }`}
+              className="form__input"
               name={name}
               onChange={(e) => handleChange(e)}
             />
