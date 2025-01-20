@@ -1,0 +1,17 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.empty {
+    border-radius: 20px;
+    border: 1px solid $border-color;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 1rem;
+
+    &__message {
+        font-size: 1rem;
+        margin-bottom: 0;
+        text-align: center;
+    }
+}

@@ -2,7 +2,7 @@
 @use "../../styles/variables" as *;
 
 .friends-page {
-  padding-bottom: 5.5rem;
+  padding-bottom: 7rem;
   &__header {
     @include flex-column;
     align-items: center;

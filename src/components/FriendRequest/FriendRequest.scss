@@ -31,4 +31,12 @@
         margin-top: 0.25rem;
         margin-bottom: 0;
     }
+
+    &__message {
+        text-align: center;
+        margin: 1rem 0;
+        font-size: 1rem;
+        font-weight: 400;
+        color: $interactive-elements;
+    }
 }
