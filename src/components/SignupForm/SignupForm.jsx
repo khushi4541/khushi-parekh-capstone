@@ -58,7 +58,7 @@ function SignupForm() {
 
     if (!validateForm()) {
       console.log("validation failed:", errors);
-      return
+      return;
     }
     try {
       await axios.post(url, {

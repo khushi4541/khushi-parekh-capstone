@@ -35,7 +35,10 @@ function FriendsPage() {
       </div>
       <SearchBar />
       <RequestList fetchLeaderboard={fetchLeaderboard} />
-      <LeaderBoard fetchLeaderboard={fetchLeaderboard} leaderboard={leaderboard}/>
+      <LeaderBoard
+        fetchLeaderboard={fetchLeaderboard}
+        leaderboard={leaderboard}
+      />
     </section>
   );
 }

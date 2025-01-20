@@ -26,8 +26,8 @@ function ProgressBar({ habitData }) {
           ></div>
         </div>
       </div>
-      <NavLink to={'/add-habit'}>
-      <AddIcon className="progress__add"/>
+      <NavLink to={"/add-habit"}>
+        <AddIcon className="progress__add" />
       </NavLink>
     </section>
   );

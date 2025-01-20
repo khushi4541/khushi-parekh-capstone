@@ -3,7 +3,6 @@ import { useEffect } from "react";
 import "./LeaderBoard.scss";
 
 function LeaderBoard({ fetchLeaderboard, leaderboard }) {
-
   useEffect(() => {
     fetchLeaderboard();
   }, []);

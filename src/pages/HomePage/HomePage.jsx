@@ -63,7 +63,11 @@ function Homepage({ openModal }) {
         <>
           <WelcomeCard userData={userData} habitData={habitData} />
           <ProgressBar habitData={habitData} />
-          <HabitsList habitData={habitData} getHabitData={getHabitData} openModal={openModal}/>
+          <HabitsList
+            habitData={habitData}
+            getHabitData={getHabitData}
+            openModal={openModal}
+          />
         </>
       )}
     </section>

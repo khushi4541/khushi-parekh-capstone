@@ -5,7 +5,7 @@ import { baseURL } from "../../../utils/api";
 import "./RequestList.scss";
 import EmptyInbox from "../EmptyInbox/EmptyInbox";
 
-function RequestList({fetchLeaderboard}) {
+function RequestList({ fetchLeaderboard }) {
   const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   const [friendRequests, setFriendRequests] = useState([]);
@@ -43,13 +43,17 @@ function RequestList({fetchLeaderboard}) {
   }, [message]);
 
   if (isLoading) {
-    return <h3 className="dashboard__loading">Loading requests...</h3>
+    return <h3 className="dashboard__loading">Loading requests...</h3>;
   }
 
   return (
     <section className="request-list">
       <h3 className="request-list__title">Friend Requests</h3>
-      {!isLoading && message ? <p className="request__message">{message}</p> : ""}
+      {!isLoading && message ? (
+        <p className="request__message">{message}</p>
+      ) : (
+        ""
+      )}
       {friendRequests.length === 0 ? (
         <EmptyInbox />
       ) : (

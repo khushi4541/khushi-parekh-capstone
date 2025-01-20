@@ -61,7 +61,6 @@ function LoginForm() {
       navigate("/dashboard");
     } catch (error) {
       if (error.response && error.response.data.message) {
-
         setErrors({ formError: error.response.data.message });
       } else {
         setErrors({
@@ -84,7 +83,7 @@ function LoginForm() {
             <p className="login-form__label">{label}</p>
             <input
               type={name === "password" ? "password" : "text"}
-              className="login-form__input" 
+              className="login-form__input"
               name={name}
               onChange={(e) => handleChange(e)}
             />

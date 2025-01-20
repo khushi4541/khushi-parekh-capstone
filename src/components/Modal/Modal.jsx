@@ -1,6 +1,13 @@
 import "./Modal.scss";
 
-function Modal({ title, message, primaryActionText, secondaryActionText, primaryAction, secondaryAction }) {
+function Modal({
+  title,
+  message,
+  primaryActionText,
+  secondaryActionText,
+  primaryAction,
+  secondaryAction,
+}) {
   return (
     <div className="modal">
       <article className="modal__foreground">
@@ -20,13 +27,15 @@ function Modal({ title, message, primaryActionText, secondaryActionText, primary
             />
           </svg>
           <h3 className="modal__title">{title}</h3>
-          <p className="modal__message">
-            {message}
-          </p>
+          <p className="modal__message">{message}</p>
         </div>
         <div className="modal__buttons">
-          <button className="modal__cancel" onClick={secondaryAction}>{secondaryActionText}</button>
-          <button className="modal__action" onClick={primaryAction}>{primaryActionText}</button>
+          <button className="modal__cancel" onClick={secondaryAction}>
+            {secondaryActionText}
+          </button>
+          <button className="modal__action" onClick={primaryAction}>
+            {primaryActionText}
+          </button>
         </div>
       </article>
     </div>
