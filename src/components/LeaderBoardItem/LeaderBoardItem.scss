@@ -1,0 +1,28 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.board-item {
+  padding: 0 1.25rem 0 0.75rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  gap: 2rem;
+
+  &__text {
+    text-align: center;
+  }
+
+  &__username {
+    font-weight: 500;
+  }
+
+  &__streak {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    &-count {
+        padding-left: 0.25rem;
+    }
+  }
+}

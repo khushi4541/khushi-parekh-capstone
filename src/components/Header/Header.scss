@@ -1,0 +1,8 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.header {
+    padding: 2rem 1.25rem;
+    @include flex-space-between;
+
+}

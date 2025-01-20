@@ -1,0 +1,43 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.login-form {
+  padding: 0 1.5rem;
+
+  &__title {
+    font-weight: 500;
+    margin-top: 1rem;
+  }
+
+  &__label {
+    font-weight: 500;
+    color: $label-color;
+    margin-bottom: 0.25rem;
+    font-size: 0.813rem;
+  }
+
+  &__input {
+    @include input-box;
+    width: 95%;
+  }
+
+  &__button {
+    @include primary-button;
+    width: 100%;
+    margin-top: 6rem;
+  }
+
+  &__error {
+    margin: 0.25rem 0;
+    &-message {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+  }
+
+  &__form-error {
+    font-size: 0.875rem;
+    margin: 1rem 0 0 0.5rem;
+  }
+}

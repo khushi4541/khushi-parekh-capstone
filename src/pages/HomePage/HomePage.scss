@@ -1,0 +1,8 @@
+.dashboard {
+  padding-bottom: 5.5rem;
+  &__loading, &__error {
+    text-align: center;
+    margin-top: 5rem;
+  }
+  
+}

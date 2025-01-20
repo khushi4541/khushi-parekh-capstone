@@ -1,0 +1,45 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.form {
+  padding: 0 1.5rem;
+
+  &__title {
+    font-weight: 500;
+    margin-top: 0;
+  }
+
+  &__label {
+    font-weight: 500;
+    color: $label-color;
+    margin-bottom: 0.25rem;
+    font-size: 0.813rem;
+  }
+
+  &__input {
+    @include input-box;
+    width: 95%;
+  }
+
+  &__button {
+    @include primary-button;
+    width: 100%;
+    margin: 2rem 0;
+  }
+
+  &__error {
+    margin: 0.25rem 0;
+    &-message {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+  }
+
+  &__success {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+}

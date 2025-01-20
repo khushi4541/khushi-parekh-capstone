@@ -1,0 +1,16 @@
+@use "./styles/variables" as *;
+@use "./styles/typography" as *;
+
+html {
+  color: $primary-text;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  background-color: $primary-background;
+  font-family: "Montserrat";
+  font-weight: 400;
+  height: 100%;
+  color: $primary-text;
+}

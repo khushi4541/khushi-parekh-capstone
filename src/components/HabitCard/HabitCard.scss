@@ -1,0 +1,37 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.habit-card {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    align-items: center;
+    gap: 0;
+    padding: 1.5rem 0;
+    text-align: left;
+    border-bottom: 1px solid #CECECE;
+
+    &__title {
+        font-weight: 600;
+        margin: 0;
+    }
+
+    &__text {
+        justify-self: flex-start;
+    }
+
+    &__streaks {
+        font-weight: 300;
+        margin-top: 0.25rem;
+        margin-bottom: 0;
+    }
+
+    &__streak-div {
+        display: flex;
+        align-items: baseline;
+        gap: 0.5rem;
+    }
+
+    &__delete {
+        justify-self: flex-end;
+    }
+}
