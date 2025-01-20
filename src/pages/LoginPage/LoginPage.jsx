@@ -1,6 +1,6 @@
 import VectorArt from "../../assets/images/login.svg";
 import LoginForm from "../../components/LoginForm/LoginForm";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import "./LoginPage.scss";
 
 function LoginPage() {
@@ -28,6 +28,12 @@ function LoginPage() {
         </svg>
       </div>
       <LoginForm />
+      <p className="login__text">
+        Don't have an account?{" "}
+        <Link to={"/login"} className="login__link">
+          <span className="login__text--bold">Sign up</span>
+        </Link>
+      </p>
     </section>
   );
 }

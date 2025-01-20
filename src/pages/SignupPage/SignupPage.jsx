@@ -1,6 +1,6 @@
 import VectorArt from "../../assets/images/signup.svg";
 import SignupForm from "../../components/SignupForm/SignupForm";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import "./SignupPage.scss";
 
 function SignupPage() {
@@ -28,6 +28,12 @@ function SignupPage() {
         </svg>
       </div>
       <SignupForm />
+      <p className="signup__text">
+        Already have an account?{" "}
+        <Link to={"/login"} className="signup__link">
+          <span className="signup__text--bold">Log in</span>
+        </Link>
+      </p>
     </section>
   );
 }

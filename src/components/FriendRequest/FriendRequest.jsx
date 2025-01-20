@@ -5,7 +5,7 @@ import declineIcon from "../../assets/icons/decline-icon.svg";
 import { baseURL } from "../../../utils/api";
 import axios from "axios";
 
-function FriendRequest({ request, handleAction, setMessage }) {
+function FriendRequest({ request, handleAction, setMessage, fetchLeaderboard }) {
   const requestId = request.id;
   const authToken = localStorage.getItem("authToken");
   console.log(authToken);
@@ -23,6 +23,7 @@ function FriendRequest({ request, handleAction, setMessage }) {
           }
         );
         setMessage("Friend request accepted!");
+        fetchLeaderboard();
       } else if (action === "decline") {
         await axios.delete(`${baseURL}/friends/request/${requestId}`, {
           headers: {

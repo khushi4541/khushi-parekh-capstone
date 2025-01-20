@@ -5,8 +5,9 @@ import { baseURL } from "../../../utils/api";
 import "./RequestList.scss";
 import EmptyInbox from "../EmptyInbox/EmptyInbox";
 
-function RequestList() {
+function RequestList({fetchLeaderboard}) {
   const [message, setMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
   const [friendRequests, setFriendRequests] = useState([]);
   const authToken = localStorage.getItem("authToken");
 
@@ -23,7 +24,7 @@ function RequestList() {
         console.error("Error fetching friend requests:", error);
       }
     };
-
+    setIsLoading(false);
     fetchFriendRequests();
   }, []);
 
@@ -41,10 +42,14 @@ function RequestList() {
     }
   }, [message]);
 
+  if (isLoading) {
+    return <h3 className="dashboard__loading">Loading requests...</h3>
+  }
+
   return (
     <section className="request-list">
       <h3 className="request-list__title">Friend Requests</h3>
-      {message ? <p className="request__message">{message}</p> : ""}
+      {!isLoading && message ? <p className="request__message">{message}</p> : ""}
       {friendRequests.length === 0 ? (
         <EmptyInbox />
       ) : (
@@ -54,6 +59,7 @@ function RequestList() {
             key={request.id}
             handleAction={handleAction}
             setMessage={setMessage}
+            fetchLeaderboard={fetchLeaderboard}
           />
         ))
       )}
