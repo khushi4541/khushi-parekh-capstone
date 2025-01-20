@@ -1,4 +1,5 @@
 import VectorArt from "../../assets/images/friends.svg";
+import LeaderBoard from "../../components/LeaderBoard/LeaderBoard";
 import RequestList from "../../components/RequestList/RequestList";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import "./FriendsPage.scss";
@@ -15,6 +16,7 @@ function FriendsPage() {
       </div>
       <SearchBar />
       <RequestList />
+      <LeaderBoard />
     </section>
   );
 }

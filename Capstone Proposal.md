@@ -4,7 +4,7 @@ LevelUp
 
 ## Overview
 
-LevelUp is an interactive and social habit tracker app that allows users to build and maintain healthy habits while staying motivated through social engagement. Users can track their progress, add friends, view each other’s achievements, and send motivational messages to create a supportive community.
+LevelUp is an interactive and social habit tracker app that allows users to build and maintain healthy habits while staying motivated through social engagement. Users can track their progress, add friends, view each other’s achievements, and have some friendly competition.
 
 ### Problem Space
 
@@ -27,11 +27,11 @@ Building and maintaining habits is challenging, especially without external acco
 -Sign up and log in to track personal habits and connect with friends.
 
 **Habit Tracking:**
--Create, edit, and delete habits.
+-Create and delete habits.
 -Log daily/weekly completions and track streaks.
 
 **Friends List:**
--Add friends by username or email.
+-Add friends by username.
 -View friends' progress and streaks.
 
 **Progress Sharing:**
@@ -46,7 +46,7 @@ Building and maintaining habits is challenging, especially without external acco
 
 ### Tech Stack
 
-**Front-end:** React, Chart.js (for progress visualization).
+**Front-end:** React.
 
 **Back-end:** Node.js with Express.
 
@@ -67,15 +67,16 @@ Sign up/Sign in pages:
 -Allows users to create an account or log in
 
 Dashboard:
--Display user’s habits, streaks, and points.
+-Display user’s habits and streaks.
 -Show friends' progress and leaderboard.
+-allow users to delete a habit.
 
 Add/Edit Habit Page:
--Form to create or edit a habit.
+-Form to create a habit.
 
 Friends Page:
 -Add or manage friends.
--View friends' streaks and motivational messages.
+-View friends' progress on the leaderboard.
 
 Profile Settings:
 -Update user profile, privacy settings, and notification preferences.
@@ -93,13 +94,11 @@ Profile Settings:
 ### Data
 
 Data Points:
-User: { id, username, email, password, profilePicture, friendsList }
+User: { id, firstName, lastName, username, email, password, profilePicture }
 
-Habit: { id, userId, title, description, frequency, streakCount, completionHistory }
+Habit: { id, userId, title, frequency, streakCount, completionHistory }
 
 Friendship: { id, userId, friendId, status (pending/accepted) }
-
-Encouragement Message: { id, senderId, recipientId, message, timestamp }
 
 Relationships:
 One user can have many habits.
@@ -116,15 +115,13 @@ POST /signup: Create a new user account.
 
 POST /login: Authenticate user credentials.
 
-GET /user/:id: Fetch user profile and friends list.
+GET /user/:id: Fetch user profile.
 
 Habit Endpoints:
 
 POST /habits: Create a new habit.
 
 GET /habits: Fetch all habits for the logged-in user.
-
-PATCH /habits/:id: Update a habit.
 
 DELETE /habits/:id: Delete a habit.
 
@@ -136,11 +133,6 @@ GET /friends: Fetch all friends for the logged-in user.
 
 PATCH /friends/:id: Accept or decline a friend request.
 
-**Encouragement Endpoints:**
-
-POST /messages: Send an encouragement message.
-
-GET /messages: Fetch received messages for the logged-in user.
 
 ## Roadmap
 
@@ -169,6 +161,12 @@ Gamification:
 -Earn points for completing habits and encouraging friends.
 -Unlock badges for streaks and milestones.
 
+Messaging:
+-send motivational messages to friends 
+
 Optional Notifications:
 -Reminders to log habits or encourage friends.
+
+Responsive Design
+-make app responsive for tablet and desktop 
 
