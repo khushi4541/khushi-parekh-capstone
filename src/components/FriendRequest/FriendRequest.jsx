@@ -5,12 +5,7 @@ import declineIcon from "../../assets/icons/decline-icon.svg";
 import { baseURL } from "../../../utils/api";
 import axios from "axios";
 
-function FriendRequest({
-  request,
-  handleAction,
-  setMessage,
-  fetchLeaderboard,
-}) {
+function FriendRequest({ request, handleAction, setMessage, fetchLeaderboard }) {
   const requestId = request.id;
   const authToken = localStorage.getItem("authToken");
   console.log(authToken);

@@ -30,7 +30,7 @@ function LoginPage() {
       <LoginForm />
       <p className="login__text">
         Don't have an account?{" "}
-        <Link to={"/login"} className="login__link">
+        <Link to={"/signup"} className="login__link">
           <span className="login__text--bold">Sign up</span>
         </Link>
       </p>

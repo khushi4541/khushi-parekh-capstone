@@ -30,6 +30,7 @@
     height: 100%;
     background-color: $interactive-elements;
     border-radius: 5px;
+    transition: width 0.75s ease-in-out;
   }
 
   &__add {
