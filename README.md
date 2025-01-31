@@ -1,10 +1,8 @@
-# Project Title
-
-LevelUp
+# LevelUp
 
 ## Overview
 
-LevelUp is an interactive and social habit tracker app that allows users to build and maintain healthy habits while staying motivated through social engagement. Users can track their progress, add friends, view each other’s achievements, and have some friendly competition.
+LevelUp is an interactive and social habit tracker app that allows users to build and maintain healthy habits while staying motivated through social engagement. Users can track their progress, add friends, view each other’s achievements, and have friendly competition.
 
 ### Problem Space
 
@@ -53,108 +51,6 @@ Building and maintaining habits is challenging, especially without external acco
 **Database:** MySQL
 
 **Authentication:** Node.js with Express
-
-### APIs
-
--No external APIs required; all data is managed via the backend.
-
-### Sitemap
-
-Home Page/Landing:
--Links to sign up or log in.
-
-Sign up/Sign in pages:
--Allows users to create an account or log in
-
-Dashboard:
--Display user’s habits and streaks.
--Show friends' progress and leaderboard.
--allow users to delete a habit.
-
-Add/Edit Habit Page:
--Form to create a habit.
-
-Friends Page:
--Add or manage friends.
--View friends' progress on the leaderboard.
-
-Profile Settings:
--Update user profile, privacy settings, and notification preferences.
-
-### Mockups
-
-![Landing Page](./Wireframes/Landing%20Page.png)
-![Sign up page](./Wireframes/sign%20up%20page.png)
-![Login page](./Wireframes/Log%20in%20Page.png)
-![Dashboard](./Wireframes/Dashboard.png)
-![Add/edit Page](./Wireframes/edit%20Habits.png)
-![Friends page](./Wireframes/Friends%20page.png)
-
-
-### Data
-
-Data Points:
-User: { id, firstName, lastName, username, email, password, profilePicture }
-
-Habit: { id, userId, title, frequency, streakCount, completionHistory }
-
-Friendship: { id, userId, friendId, status (pending/accepted) }
-
-Relationships:
-One user can have many habits.
-
-One user can have many friends (many-to-many via Friendship table).
-
-One user can send/receive many encouragement messages.
-
-### Endpoints
-
-**User Endpoints:**
-
-POST /signup: Create a new user account.
-
-POST /login: Authenticate user credentials.
-
-GET /user/:id: Fetch user profile.
-
-Habit Endpoints:
-
-POST /habits: Create a new habit.
-
-GET /habits: Fetch all habits for the logged-in user.
-
-DELETE /habits/:id: Delete a habit.
-
-**Friendship Endpoints:**
-
-POST /friends: Send a friend request.
-
-GET /friends: Fetch all friends for the logged-in user.
-
-PATCH /friends/:id: Accept or decline a friend request.
-
-
-## Roadmap
-
-Week 1:
-
--Day 1-2: Finalize project structure, set up Authentication, and build backend endpoints.
-
--Day 3-4: Implement habit tracking functionality (CRUD operations and streak tracking).
-
--Day 5-6: Create frontend components for habit tracking and user dashboard.
-
-Week 2:
-
--Day 7-8: Add friends feature (friend requests, viewing progress).
-
--Day 9-10: Implement motivational features (encouragement messages, leaderboards).
-
--Day 11-12: Gamify the app with points, badges, and challenges (if time permits)
-
--Day 13: Conduct testing, fix bugs, and refine UI/UX.
-
--Day 14: Prepare final presentation/demo
 
 ## Future Implementations
 Gamification:
