@@ -5,4 +5,8 @@
     padding: 2rem 1.25rem;
     @include flex-space-between;
 
+    &__friends {
+        padding-bottom: 0;
+    }
+
 }

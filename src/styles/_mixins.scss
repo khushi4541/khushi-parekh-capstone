@@ -55,6 +55,10 @@
   font-family: "Montserrat";
   font-weight: 400;
   font-size: 0.813rem;
+
+  &:focus {
+    outline: 1px solid $interactive-elements;
+  }
 }
 
 @mixin dropdown {
@@ -69,6 +73,10 @@
   background-repeat: no-repeat;
   background-position: right 1.25rem top 50%;
   background-size: 0.65rem auto;
+
+  &:focus {
+    outline: 1px solid $interactive-elements;
+  }
 }
 
 @mixin tablet {

@@ -12,7 +12,8 @@
     @include input-box;
     width: 100%;
     box-sizing: border-box;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
+    height: 2.25rem;
 
     &-results {
       border-bottom-right-radius: 0;
@@ -22,8 +23,8 @@
 
   &__icon {
     position: absolute;
-    right: 15px;
-    bottom: 0.5px;
+    right: 10px;
+    bottom: 1.5px;
   }
 
   &__results {

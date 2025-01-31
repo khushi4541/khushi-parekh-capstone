@@ -74,7 +74,7 @@ function LoginForm() {
   return (
     <article className="login-form">
       <h1 className="login-form__title">Log in</h1>
-      <form action="" className="login-form__form" onSubmit={handleSubmit}>
+      <form action="" className="login-form__form" onSubmit={handleSubmit} autoComplete="on">
         {[
           { label: "Email Address", name: "email" },
           { label: "Password", name: "password" },
@@ -86,6 +86,7 @@ function LoginForm() {
               className="login-form__input"
               name={name}
               onChange={(e) => handleChange(e)}
+              autoComplete="on"
             />
             {errors[name] && (
               <div className="login-form__error-message">
