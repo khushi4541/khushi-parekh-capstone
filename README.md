@@ -10,7 +10,7 @@ Building and maintaining habits is challenging, especially without external acco
 
 ### Demo Video
 
-https://github.com/user-attachments/assets/fc506bb1-6b61-4b78-9756-dff54558c8f2
+https://github.com/user-attachments/assets/059ab754-4858-4946-8e5e-bb31a90ad6a4
 
 ### User Profile
 
