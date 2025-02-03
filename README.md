@@ -8,6 +8,10 @@ LevelUp is an interactive and social habit tracker app that allows users to buil
 
 Building and maintaining habits is challenging, especially without external accountability. Many habit trackers focus only on individual progress, lacking social engagement to keep users motivated. People often give up on habits due to a lack of encouragement or friendly competition. LevelUp addresses this by combining habit tracking with community support, making self-improvement more engaging and fun.
 
+### Demo Video
+
+https://github.com/user-attachments/assets/fc506bb1-6b61-4b78-9756-dff54558c8f2
+
 ### User Profile
 
 **Primary Users:** Individuals looking to build and maintain habits, especially those who thrive on social accountability and gamification.
